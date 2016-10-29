@@ -1,12 +1,12 @@
 set display=uhex,lastline
 set ignorecase
 set smartcase
-colorscheme elflord
+colorscheme blue " i prefer molokai2, but this will do
 set nobackup
 set wildmenu
 set wildmode=list:longest,full
 set wildignore=*.o,*~,*.pyc,*.pyo,*.so,*.sw*,__pycache__
-set noeb vb t_vb= # disable error bell
+set noeb vb t_vb= " disable error bell
 set backspace=indent,eol,start
 set number
 set ruler
