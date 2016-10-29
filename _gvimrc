@@ -1,0 +1,78 @@
+"set nocompatible
+"source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/mswin.vim
+"behave mswin
+"
+"set diffexpr=MyDiff()
+"function MyDiff()
+"  let opt = '-a --binary '
+"  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+"  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+"  let arg1 = v:fname_in
+"  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+"  let arg2 = v:fname_new
+"  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+"  let arg3 = v:fname_out
+"  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+"  let eq = ''
+"  if $VIMRUNTIME =~ ' '
+"    if &sh =~ '\<cmd'
+"      let cmd = '""' . $VIMRUNTIME . '\diff"'
+"      let eq = '"'
+"    else
+"      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+"    endif
+"  else
+"    let cmd = $VIMRUNTIME . '\diff'
+"  endif
+"  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+"endfunction
+"
+"
+"set scrolloff=17
+"set sidescrolloff=17
+"set cmdheight=3
+"set display=uhex,lastline
+"set columns=140
+"set lines=60
+"set nojoinspaces
+"set ignorecase
+"set smartcase
+"set number
+"set autoindent!
+"colorscheme darkblue " gray text on dark blue background
+"set background=dark " adapt text colors for background
+"set shiftwidth=4
+"set tabstop=4
+"set expandtab
+"set backup " turns on backup files
+"set backupdir=~/AppData/Local/Vim/Backup " create this directory. stores backup files here.
+"set directory=~/AppData/Local/Vim/Swap " directory to place swap files.
+"set clipboard+=unnamed " share default clipboard with windows
+"set hidden " you can change buffers without saving
+" ********translation path **********
+"source C:\Users\rpate\Documents\GitHub\LifeSize\Lifesize.Application\Scripts\translation-scripts.vim
+ 
+" more stuff at http://vi-improved.org/vimrc.html
+"execute pathogen#infect()
+"syntax on
+"filetype plugin indent on
+" no error bell:
+
+
+" Putting stuff here that doesn't work in _vimrc
+set vb t_vb=
+colorscheme molokai2
+" Syntastic stuff
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"classpath can't handle multiple paths. should be separated by ;. instead use SyntasticJavacEditClasspath command to add . on the fly as needed.
+"let g:syntastic_java_javac_classpath = 'C:\Users\rpate\bookClasses'
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
