@@ -1,0 +1,41 @@
+[core]
+#   eol=native
+	editor=\"C:/Program Files (x86)/Vim/vim74/vim.exe\"
+#	autocrlf = false
+#   autocrlf=input #pull as is and force commits to be LF (unix)
+#	whitespace = cr-at-eol
+#	autocrlf=true # this should usually be off, pull converts to windows, push converts to LF
+#   http://stackoverflow.com/questions/2333424/distributing-git-configuration-with-the-code/2354278#2354278
+[merge]
+    tool = winmerge
+[mergetool "winmerge"]
+    cmd = \"C:/Program Files (x86)/winmerge/winmergeu.exe\" \"$MERGED\"
+    path = C:/Program Files (x86)/winmerge/winmergeu.exe
+[mergetool]
+    keepBackup = false
+    trustExitCode = false
+[diff]
+    tool = winmerge
+    guitool = winmerge
+[difftool "winmerge"]
+    cmd = \"C:/Program Files (x86)/winmerge/winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
+    path = C:/Program Files (x86)/winmerge/winmergeu.exe
+[alias]
+    st = status -sb
+    ci = commit
+    br = branch
+    co = checkout
+    df = difftool
+    ready = rebase -i @{u}
+    lg = log --pretty=format:'%C(cyan)%h%Creset -%Creset %s %C(green)(%cr) %C(white)<%an>%Creset'
+    standup = log --since yesterday --author 'git config user.email' --pretty=short
+    purr = pull --rebase
+    ignored = ls-files --others -i --exclude-standard
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f

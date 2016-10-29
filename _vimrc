@@ -1,7 +1,8 @@
+syntax on
 set display=uhex,lastline
 set ignorecase
 set smartcase
-colorscheme molokai-noitalic "can't handle the default schemes
+colorscheme molokai2 "actually just molokai w/o italics
 set nobackup
 set wildmenu
 set wildmode=list:longest,full
