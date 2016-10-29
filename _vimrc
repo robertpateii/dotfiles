@@ -1,7 +1,7 @@
 set display=uhex,lastline
 set ignorecase
 set smartcase
-colorscheme blue " i prefer molokai2, but this will do
+colorscheme molokai-noitalic "can't handle the default schemes
 set nobackup
 set wildmenu
 set wildmode=list:longest,full
