@@ -77,7 +77,7 @@ Vagrant.configure("2") do |config|
     cd .vim
     mkdir colors
     cd colors
-    wget https://raw.githubusercontent.com/robertpateii/dotfiles/master/.vim/colors/molokai2.vim
+    wget https://github.com/robertpateii/dotfiles/blob/master/.vim/colors/molokai-noitalic.vim
     cd ~/.ssh
     cp /vagrant/id_rsa id_rsa
     cp /vagrant/id_rsa.pub id_rsa.pub
