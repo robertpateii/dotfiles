@@ -2,7 +2,7 @@ syntax on
 set display=uhex,lastline
 set ignorecase
 set smartcase
-colorscheme molokai2 "actually just molokai w/o italics
+colorscheme darkblue
 set nobackup
 set wildmenu
 set wildmode=list:longest,full
