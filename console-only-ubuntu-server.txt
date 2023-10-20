@@ -1,3 +1,16 @@
 sudo vi /etc/default/console-setup
 change font to 10x20 to fill out 1920x1080 host
 https://manpages.ubuntu.com/manpages/jammy/en/man5/console-setup.5.html
+
+installing guest additions console only, use sudo:
+mount /dev/cdrom /mnt
+cd /mnt
+./VBoxLinuxAdditions.run
+reboot
+
+ sudo adduser your_vm_username vboxsf
+ replace vboxsf with your custom mount location if you customized it
+
+no desktop no clipboard if you're raw console only
+also note - probably better off sshing into it with a terminal so you get a proper terminal, i found the raw console to struggle with applications that expect a proper terminal.
+
